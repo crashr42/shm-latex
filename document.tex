@@ -74,6 +74,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \usepackage{graphics}
 \ifx\pdfoutput\undefined
@@ -183,10 +190,9 @@
 \usepackage{tocloft}
 \renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth} \bfseries\MakeUppercase}
 \renewcommand{\cftbeforetoctitleskip}{-1em}
-\renewcommand{\cftaftertoctitle}{\mbox{}\hfill \\ \mbox{}\hfill{\footnotesize Стр.}\vspace{-2.5em}}
 \renewcommand{\cftchapfont}{\normalsize\bfseries \MakeUppercase{\chaptername} }
-\renewcommand{\cftsecfont}{\hspace{31pt}}
-\renewcommand{\cftsubsecfont}{\hspace{11pt}}
+\renewcommand{\cftsecfont}{\hspace{0pt}}
+\renewcommand{\cftsubsecfont}{\hspace{-10pt}}
 \renewcommand{\cftbeforechapskip}{1em}
 \renewcommand{\cftparskip}{-1mm}
 \renewcommand{\cftdotsep}{1}
