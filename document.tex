@@ -66,7 +66,6 @@
 % \input{requirements/main}
 % \end{document} % Маркер завершения документа
 
-
 \documentclass[a4paper,14pt]{extreport} %размер бумаги устанавливаем А4, шрифт
 % 12пунктов
 \usepackage{extsizes}
@@ -74,9 +73,16 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
-\usepackage{pscyr}
-  
-\usepackage{graphicx} % для вставки картинок
+\usepackage{hyperref}
+
+\usepackage{graphics}
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\fi
+\graphicspath{{images/}}
+
 \usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
 \usepackage{indentfirst} % отделять первую строку раздела абзацным отступом тоже
 \usepackage[usenames,dvipsnames]{color} % названия цветов
@@ -84,7 +90,6 @@
 \usepackage{multirow} % улучшенное форматирование таблиц
 \usepackage{ulem} % подчеркивания
 \usepackage[dvipsnames]{xcolor}
-
 
 \usepackage{listings}
 \renewcommand\lstlistingname{Листинг}
@@ -195,4 +200,9 @@
 \input{problems/main}
 \input{goals/main}
 \input{requirements/main}
+\input{complete_solutions/main}
+\input{to_be/main}
+\input{subject/main}
+\input{structure/main}
+\input{planning/main}
 \end{document}
