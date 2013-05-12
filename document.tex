@@ -37,11 +37,11 @@
 % \ESKDtitleApprovedBy{Зав. Кафедрой}{Лебедянцев В.В.} % Утверждаю
 % \renewcommand{\baselinestretch}{1} % Задаём единичный межстрочный интервал
 % \ESKDsectSkip{section}{5mm}{5mm}
-% \ESKDsectSkip{subsection}{5mm}{5mm}
 % \ESKDsectSkip{subsubsection}{5mm}{5mm}
+% \ESKDsectSkip{subsubsubsection}{5mm}{5mm}
 % \ESKDsectStyle{section}{\normalsize} % Заголовки глав обычным шрифтом
-% \ESKDsectStyle{subsection}{\normalsize} % Заголовки разделов обычным шрифтом
-% \ESKDsectStyle{subsubsection}{\normalsize} % Заголовки подразделов обычным шрифтом
+% \ESKDsectStyle{subsubsection}{\normalsize} % Заголовки разделов обычным шрифтом
+% \ESKDsectStyle{subsubsubsection}{\normalsize} % Заголовки подразделов обычным шрифтом
 
 %\documentclass[a4paper,14pt]{extreport}
 \usepackage{extsizes}
@@ -133,14 +133,14 @@
     {\thesection}
     {1em}{}
 
-\titleformat{\subsection}
+\titleformat{\subsubsection}
     {\normalsize\bfseries}
-    {\thesubsection}
+    {\thesubsubsection}
     {1em}{}
 
 \titlespacing*{\chapter}{0pt}{-30pt}{8pt}
 \titlespacing*{\section}{\parindent}{*4}{*4}
-\titlespacing*{\subsection}{\parindent}{*4}{*4}
+\titlespacing*{\subsubsection}{\parindent}{*4}{*4}
 
 \usepackage{geometry}
 \geometry{left=3cm}
@@ -181,7 +181,7 @@
 % \renewcommand{\cftbeforechapskip}{1em}
 % \renewcommand{\cftparskip}{-1mm}
 % \renewcommand{\cftdotsep}{1}
-% \setcounter{tocdepth}{2} % задать глубину оглавления — до subsection включительно
+% \setcounter{tocdepth}{2} % задать глубину оглавления — до subsubsection включительно
 
 \usepackage{eso-pic}
 
