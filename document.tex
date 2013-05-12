@@ -1,29 +1,16 @@
 \documentclass[russian,utf8,floatsection,equationsection,14pt]{eskdtext}
-% %Better sans-serif fonts
-% \usepackage{pscyr}
-% \renewcommand{\rmdefault}{cmr}
-% \renewcommand{\sfdefault}{ftx}
-% \renewcommand{\ttdefault}{cmtt}
-% % Объявляем документ класса eskdtext (подробнее можно узнать из описания пакета
-% % eskdx) russian - текст на русском языке, utf8 - кодировка документа UTF-8
-% % floatsection - нумерация таблиц и унков с учётом номера главы,
-% % equationsection - то же для формул
-% \usepackage{longtable} % В документе используем пакет longtable для создания таблиц
-% \usepackage{graphicx} %s Используем графику в документе
-% \usepackage{mathtext} % Русские буквы в формулах \usepackage[T2A]{fontenc}
-% \usepackage{setspace}
-% 
-% \ESKDdocName{Проект сети широкополосного доступа на базе FTTH в г. Тавда}
-% \ESKDsignature{ДИПЛОМНЫЙ ПРОЕКТ}
-% \ESKDdepartment{%
-% Государственное образовательное учреждение высшего профессионального образования
-% }
-% \ESKDcompany{%
-% Сибирский государственный университет телекоммуникаций и информатики
-% 
-% (ГОУ ВПО СибГУТИ)
-% }
-% \ESKDauthor{Федотов~С.\,А.} % "Разраб." в штампе на листе содержания
+\usepackage{setspace}
+ 
+%\ESKDdocName{Проект сети широкополосного доступа на базе FTTH в г. Тавда}
+%\ESKDsignature{ДИПЛОМНЫЙ ПРОЕКТ}
+%\ESKDdepartment{
+%	Государственное образовательное учреждение высшего профессионального
+% образования }
+%\ESKDcompany{%
+%	Сибирский государственный университет телекоммуникаций и информатики
+%	(ГОУ ВПО СибГУТИ)
+%}
+%\ESKDauthor{Федотов~С.\,А.} % "Разраб." в штампе на листе содержания
 % \ESKDchecker{Иванов И.И.} % "Пров."  в штампе на листе содержания
 % \ESKDnormContr{Петров П.П.} % "Н. контр." в штампе на листе содержания
 % \ESKDapprovedBy{Сидоров С.С.}%  "Увт." в штампе на листе содержания
@@ -35,15 +22,13 @@
 % \ESKDtheYear~г.} % Шаблон для отображения в нижней части титульного листа города и года
 % \ESKDtitleDesignedBy{Дипломник}{Федотов С.А.} % Подпись и дата под заголовком документа
 % \ESKDtitleApprovedBy{Зав. Кафедрой}{Лебедянцев В.В.} % Утверждаю
-% \renewcommand{\baselinestretch}{1} % Задаём единичный межстрочный интервал
-% \ESKDsectSkip{section}{5mm}{5mm}
-% \ESKDsectSkip{subsubsection}{5mm}{5mm}
-% \ESKDsectSkip{subsubsubsection}{5mm}{5mm}
-% \ESKDsectStyle{section}{\normalsize} % Заголовки глав обычным шрифтом
-% \ESKDsectStyle{subsubsection}{\normalsize} % Заголовки разделов обычным шрифтом
-% \ESKDsectStyle{subsubsubsection}{\normalsize} % Заголовки подразделов обычным шрифтом
+\ESKDsectSkip{subsubsection}{4pt}{4pt}
+\ESKDsectSkip{subsection}{4pt}{4pt}
+\ESKDsectSkip{section}{4pt}{4pt}
+\ESKDsectStyle{section}{\large \bfseries \centering}
+\ESKDsectStyle{subsection}{\normalsize \bfseries}
+\ESKDsectStyle{subsubsection}{\normalsize \bfseries}
 
-%\documentclass[a4paper,14pt]{extreport}
 \usepackage{extsizes}
 \usepackage{cmap}
 \usepackage[T2A]{fontenc}
@@ -59,11 +44,6 @@
 }
 
 \usepackage{graphics}
-%\ifx\pdfoutput\undefined
-%\usepackage{graphicx}
-%\else
-%\usepackage[pdftex]{graphicx}
-%\fi
 \graphicspath{{images/}}
 
 \usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
@@ -109,39 +89,6 @@
 \frenchspacing
 \setlength{\parindent}{1.27cm}
 
-% \usepackage{fancyhdr}
-% \fancypagestyle{plain}{
-% 	\fancyhf{}
-% 	\fancyfootoffset{0cm}
-% 	\fancyfoot[R]{
-% 		\hspace{2cm}\thepage
-% 	}
-% 	\renewcommand{\headrulewidth}{0pt}
-% 	\renewcommand{\footrulewidth}{0pt}
-% }
-
-\usepackage{titlesec}
-
-\titleformat{\chapter}[display]
-    {\filcenter}
-    {\MakeUppercase{\chaptertitlename} \thechapter}
-    {8pt}
-    {\bfseries}{}
-
-\titleformat{\subsection}
-    {\normalsize\bfseries}
-    {\thesection}
-    {1em}{}
-
-\titleformat{\subsubsection}
-    {\normalsize\bfseries}
-    {\thesubsubsection}
-    {1em}{}
-
-\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
-\titlespacing*{\subsection}{\parindent}{*4}{*4}
-\titlespacing*{\subsubsection}{\parindent}{*4}{*4}
-
 \usepackage{geometry}
 \geometry{left=3cm}
 \geometry{right=1.5cm}
@@ -172,19 +119,6 @@
     \likechapterheading{#1}
     \addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}}
 
-% \usepackage{tocloft}
-% \renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth} \bfseries\MakeUppercase}
-% \renewcommand{\cftbeforetoctitleskip}{-1em}
-% \renewcommand{\cftchapfont}{\normalsize\bfseries}
-% \renewcommand{\cftsecfont}{\hspace{0pt}}
-% \renewcommand{\cftsubsecfont}{\hspace{-10pt}}
-% \renewcommand{\cftbeforechapskip}{1em}
-% \renewcommand{\cftparskip}{-1mm}
-% \renewcommand{\cftdotsep}{1}
-% \setcounter{tocdepth}{2} % задать глубину оглавления — до subsubsection включительно
-
-\usepackage{eso-pic}
-
 \begin{document}
 \renewcommand\contentsname{Содержание}
 \tableofcontents % это оглавление, которое генерируется автоматически
@@ -207,8 +141,9 @@
 \input{information_protection/main}
 \input{definitions_dictionary/main}
 
-\cite{Bailey}
+% \cite{Bailey}
 
+\newpage
 \bibliographystyle{ugost2008ls}
 \bibliography{biblio}
 \end{document}
