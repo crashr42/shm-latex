@@ -1,0 +1,29 @@
+\newpage
+\chapter{Развертывание}
+\section{Аппаратная конфигурация}
+Для достижения минимальных затрат по закупке оборудования - система может
+располагаться на одном физическом сервере. Однако данная схема не рекомендуется
+из за ее ненадежности.
+
+\begin{figure}[h]
+\center{\includegraphics[width=1\linewidth]{hardware_configuration.eps}}
+\caption{Схема связи между серверами}
+\label{ris:hardware_configuration}
+\end{figure}
+
+На рисунке \ref{ris:hardware_configuration} изображена минимально рекомендуемая
+схема серверов. При такой схеме кажный сервер выполняет свою задачу независимо
+от других серверов:
+\begin{enumerate}
+  \item Websocket сервер обслуживает обмен сообщений между пользователями;
+  \item Rails сервер обеспечивает работу непосредственно системы;
+  \item Сервер базы данных обслуживает работу Postgresql базы;
+  \item Zabbix сервер занимается мониторингом работы всех серверов.
+\end{enumerate}
+
+\input{deployment/sait}
+\input{deployment/nginx}
+\input{deployment/unicorn}
+\input{deployment/logs}
+\input{deployment/backup}
+\input{deployment/administrating}
