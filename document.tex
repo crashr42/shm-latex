@@ -1,34 +1,6 @@
 \documentclass[russian,utf8,floatsection,equationsection,14pt]{eskdtext}
 \usepackage{setspace}
  
-%\ESKDdocName{Проект сети широкополосного доступа на базе FTTH в г. Тавда}
-%\ESKDsignature{ДИПЛОМНЫЙ ПРОЕКТ}
-%\ESKDdepartment{
-%	Государственное образовательное учреждение высшего профессионального
-% образования }
-%\ESKDcompany{%
-%	Сибирский государственный университет телекоммуникаций и информатики
-%	(ГОУ ВПО СибГУТИ)
-%}
-%\ESKDauthor{Федотов~С.\,А.} % "Разраб." в штампе на листе содержания
-% \ESKDchecker{Иванов И.И.} % "Пров."  в штампе на листе содержания
-% \ESKDnormContr{Петров П.П.} % "Н. контр." в штампе на листе содержания
-% \ESKDapprovedBy{Сидоров С.С.}%  "Увт." в штампе на листе содержания
-% \ESKDdate{2013/05/02} % Дата (Год отображается на титульной странице)
-% \ESKDsignature{ФЗО 210406.052 ПЗ} % Шифр
-% \ESKDletter{}{У}{} % Литеры
-% \renewcommand{\ESKDtheTitleFieldX}{
-% 	Новосибирск
-% \ESKDtheYear~г.} % Шаблон для отображения в нижней части титульного листа города и года
-% \ESKDtitleDesignedBy{Дипломник}{Федотов С.А.} % Подпись и дата под заголовком документа
-% \ESKDtitleApprovedBy{Зав. Кафедрой}{Лебедянцев В.В.} % Утверждаю
-\ESKDsectSkip{subsubsection}{8pt}{12pt}
-\ESKDsectSkip{subsection}{8pt}{8pt}
-\ESKDsectSkip{section}{8pt}{8pt}
-\ESKDsectStyle{section}{\large \bfseries \centering}
-\ESKDsectStyle{subsection}{\normalsize \bfseries}
-\ESKDsectStyle{subsubsection}{\normalsize \bfseries}
-
 \pdfimageresolution=600
 \usepackage{extsizes}
 \usepackage{cmap}
@@ -93,7 +65,7 @@
 \usepackage{geometry}
 \geometry{left=3cm}
 \geometry{right=1.5cm}
-\geometry{top=2.4cm}
+\geometry{top=2cm}
 \geometry{bottom=2.4cm}
 
 \usepackage{enumitem}
@@ -119,6 +91,31 @@
 \newcommand{\likechapter}[1]{
     \likechapterheading{#1}
     \addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}}
+
+\ESKDdocName{Мониторинг детей с ВПС}
+\ESKDsignature{Дипломный проект}
+\ESKDdepartment{
+	Государственное образовательное учреждение высшего профессионального
+ образования }
+\ESKDcompany{%
+	Кузбасский государственный технический университет\\ имени Ф.А. Горбачева
+}
+\ESKDauthor{Колесников Д.С., Кошкин Н.Г.}
+\ESKDchecker{Иванов И.И.} % "Пров."  в штампе на листе содержания
+\ESKDnormContr{Ванеев О.Н.} % "Н. контр." в штампе на листе содержания
+\ESKDapprovedBy{Сидоров С.С.}%  "Увт." в штампе на листе содержания
+\ESKDdate{2013/05/18} % Дата (Год отображается на титульной странице)
+\ESKDletter{}{У}{} % Литеры
+\renewcommand{\ESKDtheTitleFieldX}{Кемерово~\ESKDtheYear~г.}
+\ESKDtitleDesignedBy{Дипломник}{Колесников Д.С.}
+\ESKDtitleDesignedBy{Дипломник}{Кошкин Н.Г.}
+\ESKDtitleApprovedBy{Зав. Кафедрой}{Лебедянцев В.В.} % Утверждаю
+\ESKDsectSkip{subsubsection}{8pt}{12pt}
+\ESKDsectSkip{subsection}{8pt}{8pt}
+\ESKDsectSkip{section}{8pt}{8pt}
+\ESKDsectStyle{section}{\large \bfseries \centering}
+\ESKDsectStyle{subsection}{\normalsize \bfseries}
+\ESKDsectStyle{subsubsection}{\normalsize \bfseries}
 
 \begin{document}
 \renewcommand\contentsname{Содержание}
@@ -148,4 +145,7 @@
 \newpage
 \bibliographystyle{ugost2008ls}
 \bibliography{biblio}
+
+\maketitle
+
 \end{document}
