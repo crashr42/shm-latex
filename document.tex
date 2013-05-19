@@ -102,15 +102,15 @@
 	Кузбасский государственный технический университет\\ имени Ф.А. Горбачева
 }
 \ESKDauthor{Калесников Д.С., Кошкин Н.Г.}
-\ESKDchecker{Иванов И.И.} % "Пров."  в штампе на листе содержания
+\ESKDchecker{} % "Пров."  в штампе на листе содержания
 \ESKDnormContr{Ванеев О.Н.} % "Н. контр." в штампе на листе содержания
-\ESKDapprovedBy{Сидоров С.С.}%  "Увт." в штампе на листе содержания
+\ESKDapprovedBy{}%  "Увт." в штампе на листе содержания
 \ESKDdate{2013/05/18} % Дата (Год отображается на титульной странице)
 \ESKDletter{}{У}{} % Литеры
 \renewcommand{\ESKDtheTitleFieldX}{Кемерово~\ESKDtheYear~г.}
 \ESKDtitleDesignedBy{Дипломник}{Калесников Д.С.}
 \ESKDtitleDesignedBy{Дипломник}{Кошкин Н.Г.}
-\ESKDtitleApprovedBy{Зав. Кафедрой}{Лебедянцев В.В.} % Утверждаю
+\ESKDtitleApprovedBy{Зав. Кафедрой}{Чичерин И. В.} % Утверждаю
 \ESKDsectSkip{subsubsection}{8pt}{12pt}
 \ESKDsectSkip{subsection}{8pt}{8pt}
 \ESKDsectSkip{section}{8pt}{8pt}
@@ -134,6 +134,7 @@
 \setlist[enumerate,2]{leftmargin=1cm}
 
 \begin{document}
+\maketitle
 \renewcommand\contentsname{Содержание}
 \tableofcontents % это оглавление, которое генерируется автоматически
 \input{enter/main}
@@ -155,13 +156,9 @@
 \input{information_protection/main}
 \input{conclusions/main}
 \input{definitions_dictionary/main}
-\input{applications/main}
-
 \nocite{*}
 \newpage
 \bibliographystyle{ugost2008ls}
 \bibliography{biblio}
-
-\maketitle
-
+\input{applications/main}
 \end{document}
