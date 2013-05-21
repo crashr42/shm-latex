@@ -30,7 +30,6 @@
 *.vrb
 *.xdy
 *.tdo
-*.texlipse
 *.project
 images/*.eps
 images/*.pdf
