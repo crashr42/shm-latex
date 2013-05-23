@@ -4,6 +4,30 @@
 \center{\includegraphics[width=0.8\linewidth]{sequence_client.eps}}
 \caption{Сценарий работы личного кабинета на клиенте}
 \label{app:sequence_client}
+
+% Клиент -> Приложение : http запрос
+% Приложение -> Приложение : Обработка
+% Приложение --> Клиент : http ответ
+% Клиент -> RequireJs : Запрос модуля
+% Приложение --> RequireJs : Файл
+% RequireJs -> RequireJs : Разрешение зависимостей
+% RequireJs -> Приложение : Запрос файла
+% RequireJs -> RequireJs : Создание модуля
+% RequireJs -> View : Инициализация
+% View -> View : Инициализация модуля
+% View -> View : Создание интерфейса
+% View --> Клиент : Отображение интерфейса
+% 
+% Клиент -> View : Действие
+% View -> Приложение : http запрос
+% Приложение -> Приложение : Обработка
+% Приложение --> View : http ответ
+% View -> Router : Фиксация состояния
+% Router -> Router : Изменение URL
+% Router -> View 
+% View -> View : Обновление интерфейса
+% View -> Клиент : Отображение интерфейса
+
 \end{figure}
 
 \newpage
@@ -11,6 +35,20 @@
 \center{\includegraphics[width=0.9\linewidth]{sequence_server.eps}}
 \caption{Сценарий работы личного кабинета на сервере}
 \label{app:sequence_server}
+
+% Клиент -> Router : http запрос
+% Router -> Router : Маршрутизация
+% Router -> Controller : Вызов обработчика
+% Controller -> Model : Запрос данных
+% Model -> Database : Запрос
+% Database --> Model : Данные
+% Model -> Model : Бизнес-логика
+% Model --> Controller : Данные
+% Controller -> Controller : Обработка
+% Controller -> View : Отображение данных
+% View -> View : Генерация тела ответа
+% View -> Клиент : http ответ
+
 \end{figure}
 
 \newpage
