@@ -10,5 +10,5 @@ Dir.entries('.').each do |entry|
     base_name = File.basename(entry, '.*')
     puts "Converting #{base_name} ..."
     `convert -flatten #{entry} #{base_name}.new.png`
-    `./png2eps #{entry} > #{base_name}.eps`
+    `./png2eps #{base_name}.new.png > #{base_name}.eps`
 end

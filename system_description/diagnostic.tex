@@ -8,6 +8,14 @@ REST API (рисунок \ref{ris:diagnostic_post_request}).
 \center{\includegraphics[width=1\linewidth]{diagnostic_post_request.eps}}
 \caption{Процесс приема диагностических данных}
 \label{ris:diagnostic_post_request}
+
+% "http client" -> "web api" : POST запрос
+% "web api" -> "database" : Сохранение данных
+% "web api" -> "websocket server" : Публикация данных
+% "websocket server" -> "websocket server" : Выбор подписчиков
+% "websocket server" -> "websocket client" : Отправка данных
+% "websocket client" -> "backbone" : Передача данных
+
 \end{figure}
 
 Запрос представляется из себя стандартный POST запрос по адресу

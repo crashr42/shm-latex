@@ -253,12 +253,47 @@ Active Record (рис. \ref{ris:migration_algorithm}). Каждая времен
 \center{\includegraphics[width=0.5\linewidth]{development_migrations.eps}}
 \caption{Централизованный контроль версий базы данных.}
 \label{ris:development_migrations}
+
+% database "local 1"
+% database "local 2"
+% database "local 3"
+% database "production database"
+% 
+% :developer 1: -up-> [local 1] : migrate
+% :developer 2: -up-> [local 2] : migrate
+% :developer 3: -up-> [local 3] : migrate
+% 
+% :developer 1: -down-> [vcs server] : commit
+% :developer 2: -down-> [vcs server] : commit
+% :developer 3: -down-> [vcs server] : commit
+% 
+% [vcs server] -down-> [production server] : deploy
+% [production server] -right-> [production database] : migrate
+
 \end{figure}
 
 \begin{figure}[h]
 \center{\includegraphics[width=0.5\linewidth]{migration_algorithm.eps}}
 \caption{Схема выполнения миграции.}
 \label{ris:migration_algorithm}
+
+% start
+% 
+% :Получение миграций из vcs репозитория;
+% :Подключение к базе данных;
+% if (Есть невыполненные миграции?) then (Да)
+% repeat
+%   :Генерация SQL запросов;
+%   :Выполнение миграции;
+%   :Пометка миграции как выполненной;
+% repeat while (Есть невыполненная миграция?)
+% :Обновление главной схемы;
+% else (Нет)
+%   stop
+% endif
+% 
+% stop
+
 \end{figure}
 
 \subsection{Использование сторонних библиотек на языке Ruby}
