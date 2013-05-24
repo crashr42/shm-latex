@@ -31,6 +31,8 @@
 \usepackage{courier}
 \usepackage{listings}
 \usepackage{listingsutf8}
+\usepackage{pdfpages}
+\usepackage{lscape}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -134,7 +136,17 @@
 \setlist[enumerate,2]{leftmargin=1cm}
 
 \begin{document}
-\maketitle
+\ESKDstyle{empty}
+\includepdf[pages={1}]{title_pages/main.pdf}
+\includepdf[pages={1}]{title_pages/title_Kalesnikov.pdf}
+\includepdf[pages={1}]{title_pages/title_Koshkin.pdf}
+\includepdf[pages={1}]{title_pages/title_Kalesnikov_2.pdf}
+\includepdf[pages={2}, landscape]{title_pages/title_Kalesnikov_2.pdf}
+\includepdf[pages={1}]{title_pages/title_Koshkin_2.pdf}
+\includepdf[pages={2}, landscape]{title_pages/title_Koshkin_2.pdf}
+
+\ESKDstyle{formIIab}
+\ESKDthisStyle{formII}
 \renewcommand\contentsname{Содержание}
 \tableofcontents % это оглавление, которое генерируется автоматически
 \input{enter/main}
