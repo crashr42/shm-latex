@@ -3,7 +3,7 @@
 \sloppy
  
 \pdfimageresolution=600
-% \usepackage{extsizes}
+
 \usepackage{cmap}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -16,6 +16,8 @@
     linkcolor=black,
     urlcolor=black
 }
+
+\usepackage{eskdtotal}
 
 \usepackage{graphics}
 \graphicspath{{images/}}
@@ -103,10 +105,14 @@
 \ESKDcompany{%
 	Кузбасский государственный технический университет\\ имени Ф.А. Горбачева
 }
-\ESKDauthor{Калесников Д.С., Кошкин Н.Г.}
-\ESKDchecker{} % "Пров."  в штампе на листе содержания
-\ESKDnormContr{Ванеев О.Н.} % "Н. контр." в штампе на листе содержания
-\ESKDapprovedBy{}%  "Увт." в штампе на листе содержания
+\renewcommand{\ESKDcolumnXfIname}{Студент}
+\ESKDauthor{Калесников Д.С.}
+\renewcommand{\ESKDcolumnXfIIname}{Студент}
+\ESKDchecker{Кошкин Н.Г.}
+\renewcommand{\ESKDcolumnXfVname}{Руковод.}
+\ESKDnormContr{Ванеев О.Н.}
+\renewcommand{\ESKDcolumnXfVIname}{Зав. каф.}
+\ESKDapprovedBy{Чичерин И.В}%  "Увт." в штампе на листе содержания
 \ESKDdate{2013/05/18} % Дата (Год отображается на титульной странице)
 \ESKDletter{}{У}{} % Литеры
 \renewcommand{\ESKDtheTitleFieldX}{Кемерово~\ESKDtheYear~г.}
@@ -139,13 +145,21 @@
 \ESKDstyle{empty}
 \includepdf[pages={1}]{title_pages/main.pdf}
 \includepdf[pages={1}]{title_pages/title_Kalesnikov.pdf}
+\includepdf[pages={2}]{title_pages/title_Kalesnikov.pdf}
 \includepdf[pages={1}]{title_pages/title_Koshkin.pdf}
+\includepdf[pages={2}]{title_pages/title_Koshkin.pdf}
 \includepdf[pages={1}]{title_pages/title_Kalesnikov_2.pdf}
 \includepdf[pages={2}, landscape]{title_pages/title_Kalesnikov_2.pdf}
 \includepdf[pages={1}]{title_pages/title_Koshkin_2.pdf}
 \includepdf[pages={2}, landscape]{title_pages/title_Koshkin_2.pdf}
 
 \ESKDstyle{formIIab}
+
+\newpage
+\ESKDthisStyle{empty}
+\input{annotation/main}
+
+\newpage
 \ESKDthisStyle{formII}
 \renewcommand\contentsname{Содержание}
 \tableofcontents % это оглавление, которое генерируется автоматически
